@@ -1,0 +1,224 @@
+body {
+    margin: 0;
+}
+
+.topbar {
+    background-color: rgb(255, 250, 221);
+    height: 15vh;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.topbar .logo-area {
+    height: 100%;
+    display: inline;
+    float:left;
+    position: relative;
+}
+
+.topbar .logo-area img {
+    height: 100%;
+}
+
+.topbar .title-area {
+    height: 100%;
+    display: flex;
+    float:left;
+    align-items: center;
+}
+
+.topbar .right {
+    height: 100%;
+    width: 80%;
+    display: inline;
+    float:left;
+}
+
+.topbar .right .upright {
+    float: left;
+    height: 70%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.topbar .right .upright .searchbox {
+    width: 60%;
+    height: 40px;
+    position: relative;
+    margin-left: 5%;
+    
+}
+.topbar .right .upright .searchbox input {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: #0000;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+}
+
+.topbar .right .upright .bagicon {
+    width: 70px;
+    height: 70px;
+    float: left;
+    display: inline;
+    position: relative;
+}
+.topbar .right .upright .bagicon img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-left: 40px;
+    padding-right: 20px;
+}
+
+.topbar .right .upright .accicon {
+    width:50px;
+    height: 50px;
+    float: left;
+    display: inline;
+    position: relative;
+}
+.topbar .right .upright .accicon img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-left: 80px;
+    padding-right: 20px;
+}
+.topbar .right .downright {
+    float: left;
+    height: 40%;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.topbar .right .downright .menu
+{
+ width: 100%;
+ height: 20px;
+ font-family: Helvetica, sans-serif;
+ font-size: 20px;
+}
+.topbar .right .downright .menu ul
+{
+  margin-top:  2px;
+  margin-left: -90px;
+}
+.topbar .right .downright .menu ul li
+{
+  list-style-type: none;
+  display: inline;
+  margin-left: 70px;
+}
+.topbar .right .downright .menu ul li a:link 
+{
+   color: #000000;
+   text-decoration: none;
+   padding-top: 40px;
+   padding-bottom: 40px;
+   padding-left: 30px;
+   padding-right: 0px;
+}
+              
+.topbar .right .downright .menu ul li a:visited
+{
+   color: #000000;
+   text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    margin-left: 40px; margin-top: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 10px;
+}
+.topbar .right .downright .menu ul li .dropdown-content a {
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(142, 205, 221);
+    border-radius: 10px;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown > a:after {
+    content: '▼';
+    position: absolute;
+    right: -20px;
+}
+.homeintro p {
+    position: absolute;
+    top: 450px;
+    left: 250px;
+    color: rgb(34, 102, 141);
+    font-size: 50px;
+}
+.homeintro a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+}
+
+.homeintro img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+.homeintro button {
+    position: absolute;
+    top: 90%;
+    left: 18%;
+    width: 10%;
+    transform: translate(50%, -50%);
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: red;
+    box-shadow: 0px 8px 16px 0px rgba(251, 15, 15, 0.5);
+  }
+
+  .bodycontent img {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+  .bodycontent p1 {
+    position: absolute;
+    top: 152%;
+    text-align: left;
+    color: black;
+  }
+  .bodycontent p2 {
+        position: absolute;
+        top: 215%;
+        text-align: left;
+        color: black;
+  }
+  .bodycontent p3 {
+    position: absolute;
+    top: 295%;
+    text-align: left;
+    color: black;
+    font-size: 30px;
+}
+  .bodycontent h1, h2, h3 {
+    text-align: center;
+  }

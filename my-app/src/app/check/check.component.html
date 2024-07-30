@@ -1,0 +1,82 @@
+<div class="container">
+  <form [formGroup]="orderForm" (ngSubmit)="placeOrder()" novalidate>
+
+    <!-- Shipping Address Section -->
+    <div class="address-shipping">
+      <h2>1. Shipping Address</h2>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name" placeholder="Your name" required class="form-control">
+        <div *ngIf="orderForm.controls.name.invalid && orderForm.controls.name.touched" class="error">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" formControlName="phone" placeholder="Your phone number" required class="form-control">
+        <div *ngIf="orderForm.controls.phone.invalid && orderForm.controls.phone.touched" class="error">
+          A valid phone number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea id="address" formControlName="address" placeholder="Your address" required class="form-control"></textarea>
+        <div *ngIf="orderForm.controls.address.invalid && orderForm.controls.address.touched" class="error">
+          Address is required.
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Review Section -->
+    <div class="order">
+      <h2>2. Review Items and Shipping</h2>
+      <table class="table table-checkout">
+        <thead>
+          <tr>
+            <th scope="col">Items</th>
+            <th scope="col">Prices</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            <td>{{ item.name }}</td>
+            <td>{{ item.price | currency:"VND"}}</td>
+            <td>{{ item.quantity }}</td>
+            <td>{{ (item.price * item.quantity) | currency:"VND" }}</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="shipping-fee">Shipping Fee:</td>
+            <td>{{ calculateShipping() | currency }}</td>
+          </tr>
+        </tbody>
+      </table> 
+    </div>
+
+    <!-- Order Totals and Submission -->
+    <div class="check-out-order">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="totals">
+            <div class="totals-item">
+              <label>Subtotal ({{totalCount}} items):</label>
+              <span>{{subtotal | currency:"VND"}}</span>
+            </div>
+            <div class="totals-item">
+              <label>Grand Total:</label>
+              <span>{{subtotal + calculateShipping() | currency: "VND"}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 d-flex justify-content-center">
+          <button type="submit" class="btn btn-success" [disabled]="loading || orderPlaced">Place your order</button>
+        </div>
+      </div>
+      <div *ngIf="loading">Processing your order...</div>
+      <div *ngIf="orderPlaced && !loading">Thank you! Your order has been placed.</div>
+      <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+    </div>
+
+  </form>
+</div>

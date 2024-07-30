@@ -1,0 +1,63 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-12 col-md-8 offset-md-2">
+      <div class="input-group mb-3">
+        <input type="text" [(ngModel)]="searchTerm" class="form-control" placeholder="Enter Order ID">
+        <div class="input-group-append">
+          <button class="btn btn-outline-primary" type="button" (click)="searchOrder()">Track Order</button>
+        </div>
+      </div>
+
+      <div *ngIf="loading" class="text-center my-3">
+        <div class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+      <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+
+      <div *ngIf="order && !loading">
+        <div class="card">
+          <div class="card-header">
+            <h2 class="h4 mb-0">Check your order</h2>
+          </div>
+          <div class="card-body">
+            <h3 class="h5">Order Number: {{ order.orderId }}</h3>
+            <p>Order Date: {{ order.date | date }}</p>
+            <p>Status: <span class="badge badge-info">{{ order.status }}</span></p>
+            
+            <!-- Customer Information -->
+            <h3 class="h5">Customer Information</h3>
+            <p>Name: {{ order.name }}</p>
+            <p>Address: {{ order.address }}</p>
+            <p>Phone: {{ order.phone }}</p>
+            
+            <!-- Order Items -->
+            <div class="list-group my-3">
+              <div *ngFor="let item of order.items" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">{{ item.name }}</h5>
+                  <small>{{ item.quantity }} pcs</small>
+                </div>
+                <p class="mb-1">Price: {{ item.price }}</p>
+              </div>
+            </div>
+
+            <!-- Total Amount -->
+            <div class="text-right">
+              <h3 class="h5">Total:</h3>
+              <p class="lead">{{ order.total }}</p>
+            </div>
+
+            <!-- Download Link for Digital Products -->
+            <div *ngIf="order.downloadLink">
+              <a [href]="order.downloadLink" class="btn btn-primary" download>Download Your Product</a>
+            </div>
+          </div>
+          <div class="card-footer text-muted">
+            <button type="button" class="btn btn-link btn-sm top-right-button-back">Back</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="header-check">
+    <h2>Your cart</h2>
+    <button type="button" class="btn btn-link top-right-button-back">Back</button>
+  </div>
+  <main>
+    <div class="order">
+      <!-- Product Table -->
+      <table class="table table-checkout">
+        <thead>
+          <tr>
+            <td></td>
+            <th scope="col">Image</th>
+            <th scope="col">Items</th>
+            <th scope="col">Prices</th>
+            <th scope="col">Qty</th>
+            <th scope="col">Total</th>
+            <th scope="col">Operation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Loop through cart items -->
+          <tr *ngFor="let item of cartItems; let i = index">
+            <td><input type="checkbox" class="childCheckbox"></td>
+            <td class="w-25">
+              <img [src]="item.img" class="img-fluid" [alt]="item.name">
+            </td>
+            <td>{{ item.name }}</td>
+            <td>{{ item.price | currency: 'VND' }}</td>
+            <td class="qty">
+              <input type="number" class="form-control" [(ngModel)]="item.quantity" min="1" style="width: 50px;">
+            </td>
+            <td>{{ (item.price * item.quantity) | currency: 'VND' }}</td>
+            <td class="operation">
+              <button class="btn btn-danger" (click)="removeFromCart(item)">Cancel</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="container check-out-order">
+      <div class="row">
+        <div class="col-sm-6 d-flex justify-content-center">
+          <button type="button" class="btn btn-success" (click)="proceedToCheckout()">Proceed to checkout</button>
+        </div>
+        <div class="col-sm-6">
+          <div class="totals">
+            <div class="totals-item d-flex justify-content-between">
+              <label>Subtotal ({{cartItems.length}} items)</label>
+              <div class="totals-value" id="cart-subtotal">{{total | currency: 'VND'}}</div>
+            </div>
+            <div class="totals-item totals-item-total d-flex justify-content-between">
+              <label>Grand Total</label>
+              <div class="totals-value" id="cart-total">{{total | currency: 'VND'}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

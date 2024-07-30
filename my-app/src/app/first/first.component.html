@@ -1,0 +1,109 @@
+
+<div class="homeintro">
+    <img src="/assets/images/Home_img/Giới thiệu.png" width="100%">
+    <b>
+        <p>Your pet's <br> perfect utopia</p>
+    </b>
+    <button><a href="nav.html" target="_blank">Register Now</a></button>
+</div>
+
+<div class="bodycontent">
+    <h3>Why should you choose PETOPIA</h3>
+    <h1>CHOOSING A 5-STAR HEALTHY MEAL</h1>
+    <table>
+        <tr>
+            <td>   
+                <p class="bodycontent-p1-left"> <b class="center">DELICIOUSLY HARD<br>TO RESIST</b>
+                <br> High-quality fresh ingredients<br>Meets hygiene and safety standards<br>The aroma stimulates the taste buds<br>No fillers</p>
+                <img src="/assets/images/Home_img/Yellow 1.png" alt="">
+            </td>
+            <td>
+                <img src="/assets/images/Home_img/Minh họa sp.png" alt="">
+            </td>
+            <td>
+                <p class="bodycontent-p1-right"><b>SCIENTIFIC FORMULA</b>
+                <br>From an experienced Veterinarian<br>Scientific nutritional balance<br>All 6 nutritional groups<br>No additives</p>
+                <img src="/assets/images/Home_img//Blue 1.png" alt="">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="bodycontent" style="background-color: rgb(34, 102, 141); color: white;">
+    <h1>CHOOSING A DEDICATED SERVICE</h1>
+    <table>
+        <tr>
+            <td>
+                <p class="bodycontent-p2"> <b class="center"><br><br><br>FRIENDLY AND<br>DEDICATED SERVICE</b>
+                <br>Listen to your feedback<br>Resolve any issues quickly and effectively.</p>
+                <img src="/assets/images/Home_img//Dark yellow 1.png" alt="">
+            </td>
+            <td>
+                <img src="/assets/images/Home_img//Pet service.png" alt="">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="bodycontent" style="background-color: rgb(142, 205, 221); color: white;">
+    <h1>CHOOSING THE BEST<br>WITH AFFORDABLE PRICES</h1>
+    <table>
+        <tr>
+            <td style="width: 50%;">
+                <img src="/assets/images/Home_img/Happy dog.png" alt="">
+            </td>
+            <td>
+                <p class="bodycontent-p3">Save money while<br>still getting the best<br>for your pet</p>
+                <img src="/assets/images/Home_img/Yellow 2.png" alt="">
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="bodycontent" style="background-color: rgb(255, 204, 112);">
+    <table>
+        <tr>
+            <td style="width: 50%;">
+                <h1>FOLLOW<br>FACEBOOK and INSTAGRAM<br>OF PETOPIA</h1>
+            </td>
+            <td>
+                <img src="/assets/images/Home_img/Paw prints.png" alt="">
+            </td>
+        </tr>
+    </table>
+</div>
+
+   
+<div class="center">
+    <input type="checkbox" id="show">
+    <div class="container">
+        <label for="show" class="close-btn fa-solid fa-x"> </label>
+        <div class="text"> LOGIN </div>
+        <form action="post">
+            <div class="data">
+                <label> Email</label>
+                <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" required>
+            </div>
+            <div class="data">
+                <label> Password </label>
+                <input type="password" [(ngModel)]="password" required>
+            </div>
+            <div class="forgot-pass">
+                <a routerLink='/forgetpassword'>Forgot password ? </a>
+            </div>
+            <div *ngIf="errorMessage" class="alert alert-danger">
+                {{ errorMessage }}
+                </div>
+                <div *ngIf="successMessage" class="alert alert-success">
+                    {{ successMessage }}
+                  </div>
+            <div class="btn">
+                <div class="inner"></div>
+                <button type="submit" (click)="login()"> Login </button>
+            </div>
+
+            <div class="signup-link">Not a member? <a routerLink='/signup'  >Sign up Now</a></div>
+        </form>
+    </div>
+
+</div>

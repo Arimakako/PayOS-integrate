@@ -1,0 +1,86 @@
+<!-- ============== SECTION PAGETOP ============== -->
+<div class="container mt-4">
+  <ol class="breadcrumb ondark mb-4">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item"><a href="product">Product</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Product Catalog</li>
+  </ol>
+  <div class="row">
+      <div class="col-lg-3">
+          <div class="filter-container card mb-4">
+              <article class="filter-group">
+                  <header class="card-header">
+                      <a class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_cate" role="button" aria-expanded="false">
+                          <i class="icon-control fa fa-chevron-down"></i> Category
+                      </a>
+                  </header>
+                  <div class="collapse show" id="collapse_aside_cate">
+                      <div class="card-body">
+                          <div *ngFor="let cate of productcateunique">
+                              <input type="checkbox" [(ngModel)]="selectedCates" [value]="cate" (ngModelChange)="applyFilters()">
+                              <span class="form-check-label"> {{cate}} </span>
+                          </div>
+                      </div> <!-- card-body .// -->
+                  </div> <!-- collapse.// -->
+              </article>
+
+              <article class="filter-group">
+                  <header class="card-header">
+                      <a class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_price" role="button" aria-expanded="false">
+                          <i class="icon-control fa fa-chevron-down"></i> Pet Type
+                      </a>
+                  </header>
+                  <div class="collapse show" id="collapse_aside_price">
+                      <div class="card-body">
+                          <div>
+                              <span class="form-check-label" *ngFor="let s of pettypeunique"> {{s}} </span>
+                              <input type="checkbox" [(ngModel)]="selectedPetTypes" [value]="" (ngModelChange)="applyFilters()">
+                          </div>
+                      </div> <!-- card-body .// -->
+                  </div> <!-- collapse.// -->
+              </article>
+              <article class="filter-group">
+                  <header class="card-header">
+                      <a class="title" data-bs-toggle="collapse" data-bs-target="#collapse_aside_type" role="button" aria-expanded="false">
+                          <i class="icon-control fa fa-chevron-down"></i> Price
+                      </a>
+                  </header>
+                  <div class="collapse show" id="collapse_aside_type">
+                      <div class="card-body">
+                          <label for="lowerPrice">From:</label>
+                          <input type="number" id="lowerPrice" [(ngModel)]="lowerPrice" (ngModelChange)="applyFilters()" class="form-control" min="0">
+                          <br>
+                          <label for="upperPrice">To:</label>
+                          <input type="number" id="upperPrice" [(ngModel)]="upperPrice" (ngModelChange)="applyFilters()" class="form-control" min="0">
+                      </div>
+                  </div> <!-- collapse.// -->
+              </article>
+          </div>
+      </div>
+      <div class="col-lg-9">
+          <img class="img-fluid mb-4" src="./assets/images/productcatalog_img/image 1643.png" alt="Product Image">
+          <div class="d-flex justify-content-end mb-3">
+              <button (click)="sortPrice('asc')" class="btn btn-outline-primary me-2">Price Ascending</button>
+              <button (click)="sortPrice('desc')" class="btn btn-outline-primary">Price Descending</button>
+          </div>
+          <div class="product-section">
+              <div class="row g-4">
+                  <div class="col-md-4" *ngFor="let product of products | paginate:{itemsPerPage: tableSize, currentPage: page, totalItems: count}; let i = index">
+                      <div class="card product-card h-100">
+                          <img src="{{product.img}}" class="card-img-top" (click)="detailProduct(product._id)" alt="{{product.name}}">
+                          <div class="card-body text-center">
+                              <h5 class="card-title">{{product.name}}</h5>
+                              <div class="price mb-2">{{product.price}} VND</div>
+                              <button (click)="addToCart(product)" class="btn btn-primary">Add to Cart</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="d-flex justify-content-center mt-4">
+                  <pagination-controls class="pagination" previousLabel="Prev" nextLabel="Next" (pageChange)="onChange($event)"></pagination-controls>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- ============== SECTION PAGETOP END// ============== -->

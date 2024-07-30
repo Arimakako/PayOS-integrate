@@ -1,0 +1,144 @@
+:root {
+  --primary: #EEECE0;
+  --secondary: #F5F5F5;
+  --text: #311C1C;
+  --blue-text: #22668D;
+  --red-text: #FF7970;
+  --yellow-btn: #FFCC70;
+}
+
+html, body {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  color: var(--red-text);
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-check-label {
+  font-size: 16px;
+}
+
+.error {
+  color: var(--red-text);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.address-shipping, .order, .paySection {
+  background-color: var(--primary);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.table-checkout {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.table-checkout thead {
+  background: var(--primary);
+}
+
+.table-checkout td, .table-checkout th {
+  padding: 10px;
+  text-align: center;
+}
+
+.check-out-order {
+  margin-top: 20px;
+}
+
+.totals {
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.totals-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.btn-success {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: var(--yellow-btn);
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-success:hover {
+  background: #FFC107;
+}
+
+@media (max-width: 768px) {
+  .header-check {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-check h2 {
+    font-size: 28px;
+  }
+
+  .top-right-button-back {
+    font-size: 16px;
+  }
+
+  .table-checkout {
+    font-size: 14px;
+  }
+
+  .btn-success {
+    font-size: 16px;
+  }
+
+  .totals .totals-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .totals .totals-value {
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .address-shipping, .order, .paySection {
+    padding: 15px;
+  }
+}

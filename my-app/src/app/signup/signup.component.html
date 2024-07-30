@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="title"> Registration </div>
+    <form (ngSubmit)="register()">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details"> First Name </span>
+                <input type="text" placeholder="Enter your name" [(ngModel)]="firstname" name="firstname" required>
+            </div>
+            <div class="input-box">
+                <span class="details"> Last Name </span>
+                <input type="text" placeholder="Enter your lastname" [(ngModel)]="lastname" name="lastname" required>
+            </div>
+            <div class="input-box">
+                <span class="details"> Email </span>
+                <input type="email" placeholder="Enter your email" [(ngModel)]="email" name="email" required>
+                <div class="validation-message" *ngIf="!isValidEmail(email)">Invalid email format</div>
+            </div>
+            <div class="input-box">
+                <span class="details"> Password </span>
+                <input type="password" placeholder="Enter your password" [(ngModel)]="password" name="password" required>
+            </div>
+            <div class="input-box">
+                <span class="details"> Confirm Password </span>
+                <input type="password" placeholder="Confirm your password" [(ngModel)]="confirmPassword" name="confirmPassword" required>
+            </div>
+        </div>
+        <div class="button">
+            <input type="submit"  value="Register">
+        </div>
+    </form>
+</div>
+<!-- Bootstrap Modal for Alerts -->
+<!-- signup.component.html -->
+<div *ngIf="showModal" class="modal show" tabindex="-1" role="dialog" style="display: block;">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Alert</h5>
+          <button type="button" class="close" (click)="closeModal()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>{{ alertMessage }}</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

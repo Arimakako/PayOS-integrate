@@ -1,0 +1,62 @@
+<h3 class="text-center bg-success text-black p-3">Create a product</h3>
+
+<div class="container bg-light p-2">
+  <table class="table">
+    <tr>
+      <td>Product type:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="type" id="type" placeholder="Nhập phân loại thú cưng"
+          [(ngModel)]="product.pettype" />
+      </td>
+    </tr>
+    <tr>
+      <td>Product Name:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="name" id="name" placeholder="Nhập tên sản phẩm" [(ngModel)]="product.name" />
+      </td>
+    </tr>
+    <tr>
+      <td>Product Detail:</td>
+      <td>
+        <input type="text" class="form-control" #name="ngModel" name="detail" id="detail"
+            placeholder="Nhập giá tiền" [(ngModel)]="product.des" />
+      </td>
+    </tr>
+    <tr>
+        <td>Product Price:</td>
+        <td>
+          <input type="text" class="form-control" #name="ngModel" name="price" id="price"
+            placeholder="Nhập giá tiền" [(ngModel)]="product.price" />
+        </td>
+    </tr>
+    <tr>
+        <td>Product Category:</td>
+        <td>
+          <input type="text" class="form-control" #name="ngModel" name="category" id="category"
+            placeholder="Nhập phân loại sản phẩm" [(ngModel)]="product.cate" />
+        </td>
+    </tr>
+    <tr>
+      <td>Product Image:</td>
+      <td>
+        <input type="file" class="file-input" #name="ngModel" name="image" id="image"
+          [(ngModel)]="product.img" (change)="onFileSelected($event,product)" />
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button class="btn btn-dark active w-100 my-2 rounded-4" (click)="cancel()">Cancel</button>
+      </td>
+      <td>
+        <button class="btn btn-success w-100 my-2 active rounded-4" (click)="postProduct()">Submit</button>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<div class="container">
+  <p>
+    {{errMessage}}
+  </p>
+</div>
+

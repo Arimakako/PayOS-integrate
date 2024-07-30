@@ -1,0 +1,40 @@
+
+<div class=" p-2">
+  <button class="bg-color text-white" (click)="createProduct()">Create New</button>
+</div>
+
+{{errMessage}}
+
+<div class=" w-100">
+  <table class="table table-hover" border="1">
+    <tr class="bg-warning text-black text-center">
+      <td>Product Id</td>
+      <td>Product Name</td>
+      <td>Price</td>
+      <td>Product Description</td>
+      <td>Product image</td>
+      <td>Category</td>
+      <td>Pettype</td>
+      <td>Action</td>
+    </tr>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <td>{{product._id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.des}}</td>
+        <td>
+          <img src="{{product.img}}" width="150px" height="150px">
+        </td>
+        <td>{{product.cate}} </td>
+        <td>{{product.pettype}}</td>
+        <td>
+          <button class="btn btn-primary w-100 m-1" (click)="detailProduct(product._id)">Detail</button>
+          <button class="btn btn-secondary w-100 m-1" (click)="updateProduct(product._id)">Edit</button>
+          <button class="btn btn-warning w-100 m-1" (click)="deleteProduct(product._id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

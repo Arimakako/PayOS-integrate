@@ -1,0 +1,182 @@
+:root {
+  --primary: #EEECE0;
+  --secondary: #F5F5F5;
+  --text: #311C1C;
+  --blue-text: #22668D;
+  --red-text: #FF7970;
+  --yellow-btn: #FFCC70;
+}
+
+html, body {
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+}
+
+strong {
+  color: #FF7970;
+}
+
+.container {
+  padding: 20px;
+}
+
+.header-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-check h2 {
+  font-size: 36px;
+  color: var(--red-text);
+}
+
+.top-right-button-back {
+  font-size: 18px;
+  color: var(--blue-text);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.top-right-button-back:hover {
+  color: var(--red-text);
+}
+
+.order {
+  background-color: white;
+  width: 100%;
+  max-width: 1348px;
+  padding: 20px;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-checkout thead {
+  background: var(--primary);
+  border-radius: 20px;
+}
+
+.table-checkout thead td, .table-checkout thead th {
+  border: 0;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+.table-checkout td, .table-checkout th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table-checkout tbody tr {
+  background: var(--secondary);
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.table-checkout td.qty, .table-checkout th.qty {
+  max-width: 2rem;
+}
+
+.img-fluid {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.totals .totals-item {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.totals .totals-item label {
+  text-align: left;
+}
+
+.totals-value {
+  text-align: right;
+}
+
+.btn-success {
+  padding: 10px 20px;
+  border-radius: 30px;
+  background: var(--yellow-btn);
+  color: #000;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-success:hover {
+  background: #FFC107;
+}
+
+.btn-danger {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #dc3545;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-danger:hover {
+  background: #c82333;
+}
+
+.totals {
+  background: var(--secondary);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.totals-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font-family: Nunito;
+  font-style: normal;
+  color: var(--red-text);
+}
+
+@media (max-width: 768px) {
+  .header-check {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-check h2 {
+    font-size: 28px;
+  }
+
+  .top-right-button-back {
+    font-size: 16px;
+  }
+
+  .table-checkout {
+    font-size: 14px;
+  }
+
+  .btn-success {
+    font-size: 16px;
+  }
+
+  .totals .totals-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .totals .totals-value {
+    text-align: left;
+    padding-left: 0;
+  }
+}

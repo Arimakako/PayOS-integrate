@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/* General styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f8f9fa;
+    color: #1E1E1E;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Button styles */
+.btn-color {
+    background-color: #FFCC70;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-color:hover {
+    background-color: #FFB347;
+}
+
+.btn-back {
+    margin-bottom: 20px;
+}
+
+/* Product Container */
+.product-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Product Image */
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Product Info */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+/* Product Details */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Product Name */
+.product-name {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+}
+
+/* Actual Price */
+.actual-price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.actual-price-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FF5733;
+}
+
+/* Size Selection */
+.size-selection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.size-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.size-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.size-value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.size-guide-link {
+    font-size: 14px;
+    color: #007bff;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.size-guide-link:hover {
+    color: #0056b3;
+}
+
+.option-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.size-option-container {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #686363;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.size-option-container:hover {
+    background-color: #FFCC70;
+    border-color: #FFCC70;
+}
+
+.size-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.size-dimension {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.size-type {
+    font-size: 14px;
+    color: #686363;
+}
+
+/* Add to Bag Container */
+.add-to-bag-container {
+    margin-top: 20px;
+}
+
+.btn-add-to-bag {
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 30px;
+}
+
+/* Description */
+.description-container {
+    margin-top: 40px;
+}
+
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.heading-text {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.divider {
+    width: 100%;
+    height: 3px;
+    background-color: #E8E8E8;
+}
+
+.description-content {
+    margin-top: 20px;
+}
+
+.description-content p {
+    font-size: 18px;
+    line-height: 1.6;
+}

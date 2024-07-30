@@ -1,0 +1,159 @@
+:root{
+  --primary:#EEECE0;
+  --secondary:#F5F5F5;
+  --text:#311C1C;
+  --blue-text:#22668D;
+  --red-text:#FF7970;
+  --yellow-btn:#FFCC70;
+
+}
+html, body{
+  font-family: 'Nunito', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+}
+
+.container {
+    padding: 2rem 0rem;
+  }
+  
+  .table-image thead td, .table-image thead th {
+    border: 0;
+    color: #666;
+    font-size: 0.8rem;
+  }
+  .table-image td, .table-image th {
+    vertical-align: middle;
+    text-align: center;
+  }
+  .table-image td.qty, .table-image th.qty {
+    max-width: 2rem;
+  }
+  
+  .price {
+    margin-left: 1rem;
+  }
+  
+  .modal-footer {
+    padding-top: 0rem;
+  }
+  .paymethods{
+    list-style: none;
+    margin:15px 26px 0 0;
+    padding: 0;
+    float: left;
+    opacity: 0.5;
+  }
+  .paymethods li{
+    float: left;
+    width: 20%;
+    line-height: 32px;
+    padding: 0;
+    margin: 0;
+  }
+  .paymethods li img{
+    max-width: 100%;
+    vertical-align: middle;
+  }
+  .paySection:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .paySection{
+    padding: 22px 0;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin: 0 10px;
+  }
+  .action{
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+ }
+ #checkout-form{
+    
+    max-width: 1348px;
+ } 
+ .address-shipping {
+  background-color: #EEECE0;
+  width: 100%;
+  max-width: 1348px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  margin: 0 auto;
+}
+.address-shipping p {
+  margin-bottom: 0px;
+  color: var(--text);
+}
+.address-shipping strong{
+  color:var(--red-text);
+}
+.modal-body strong{
+  color:var(--red-text);
+}
+.modal-body{
+  background-color: #EEECE0;
+  width: 100%;
+  max-width: 1348px;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+}
+.totals .totals-item{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label{
+  width: 79%;
+  text-align: right;
+}
+.totals-value{
+  width: 21%;
+  text-align: right;
+}
+
+.credit-card h2 {
+  color: rgba(4,99,128,1);
+}
+
+.credit-card form {
+  display:flex;
+  flex-direction: column;
+}
+
+.credit-card .line {
+  display: flex;
+}
+.credit-card .line input {
+  width: 20%; /* on définit une taille plus petite qu'il le faut, le flex-grow fera le reste */
+  flex: 1;
+  margin: 0.4rem 0.3rem;
+}
+
+
+#creditCardModal {
+  position: relative;
+  width: 30%;
+  margin: 5rem auto;
+  padding: 1rem;
+
+  box-shadow: 2px 2px 10px #454545;
+  background-color: #FFFFFF;
+  
+  text-align: center;
+}
+#creditCardModal input {
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,.12);
+	margin: 1rem 0;
+	padding: 4px;
+	font-size: 1rem;
+	outline: none;
+}

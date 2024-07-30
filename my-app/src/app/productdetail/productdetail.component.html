@@ -1,0 +1,61 @@
+<div class="container mt-4">
+    <div class="row mb-3">
+        <div class="col-lg-12 d-flex justify-content-end">
+            <button class="btn-color btn-back" (click)="goBack()">Back</button>
+        </div>
+    </div>
+    <div class="row product-container">
+        <div class="col-md-6 product-image">
+            <img src="{{product.img}}" alt="Product Image" />
+        </div>
+        <div class="col-md-6 product-info">
+            <div class="product-details">
+                <div class="product-name">{{product.name}}</div>
+                <div class="actual-price">
+                    <div class="actual-price-value">{{product.price | currency: 'VND'}}</div>
+                </div>
+                <div class="size-selection">
+                    <div class="size-options">
+                        <div class="size-label">
+                            <div class="size-value">Select Size</div>
+                        </div>
+                        <div class="size-guide-link">Size guide</div>
+                    </div>
+                    <div class="option-container">
+                        <div class="size-option-container">
+                            <div class="size-info-container">
+                                <div class="size-dimension">134mm</div>
+                                <div class="size-type">Medium</div>
+                            </div>
+                        </div>
+                        <div class="size-option-container">
+                            <div class="size-info-container">
+                                <div class="size-dimension">134mm</div>
+                                <div class="size-type">Medium</div>
+                            </div>
+                        </div>
+                        <div class="size-option-container">
+                            <div class="size-info-container">
+                                <div class="size-dimension">134mm</div>
+                                <div class="size-type">Medium</div>
+                            </div>
+                        </div>
+                        <!-- Repeat for other size options -->
+                    </div>
+                </div>
+                <div class="add-to-bag-container">
+                    <button class="btn-color btn-add-to-bag" (click)="addToCart(product)">Add to Bag</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="description-container mt-5">
+        <div class="section-heading">
+            <div class="heading-text">Description</div>
+            <div class="divider"></div>
+        </div>
+        <div class="description-content">
+            <p>{{product.des}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+[
+    {
+
+        "context": ["/combos"],
+        "target": "http://localhost:9992",
+        "secure": true,
+        "changeOrigin":true,
+        "logLevel":"debug"
+        },
+  {
+    "context": ["/products"],
+    "target": "http://localhost:9992",
+    "secure": true,
+    "changeOrigin":true,
+    "logLevel":"debug"
+},
+{
+    "context": ["/blogs"],
+    "target": "http://localhost:9992",
+    "secure": true,
+    "changeOrigin":true,
+    "logLevel":"debug"
+},
+{
+    "context": ["/services"],
+    "target": "http://localhost:9992",
+    "secure": true,
+    "changeOrigin":true,
+    "logLevel":"debug"
+}
+]

@@ -1,0 +1,129 @@
+
+        .main-container {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            background-image: url('../../assets/images/mainproduct_img/Allcombined.png');
+            background-repeat: no-repeat; 
+            background-size: cover; 
+            height: 700px;
+            width: 1550px;
+        }
+        
+        .custom-width {
+            width: 100%;
+        }
+        
+        .content-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            
+        }
+        
+        .title {
+            width: 561px;
+            height: 174px;
+            color: #22668D;
+            font-size: 64px;
+            font-family: Nunito;
+            font-weight: 900;
+            word-wrap: break-word;
+        }
+        
+        .subtitle {
+            width: 637.13px;
+            height: 92.19px;
+            color: #22668D;
+            font-size: 36px;
+            font-family: Nunito;
+            font-weight: 900;
+            word-wrap: break-word;
+        }
+        
+        .button-container {
+            width: 209px;
+            height: 47px;
+            background: #22668D;
+            border-radius: 19px;
+            display: flex;
+            position: absolute;
+            top: 324px;
+   
+        }
+    
+        
+        .button-text {
+            width: 201px;
+            height: 49px;
+            color: #F2DBDB;
+            font-size: 36px;
+            font-family: Nunito;
+            font-weight: 900;
+            word-wrap: break-word;
+            margin-left: 20px;
+            position: absolute;
+            top: 0px;
+            left: -15px; /* Adjust as needed */
+        }
+        .container-category {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px; /* Adjust the gap between cards as needed */
+            justify-content: center; /* Center the cards horizontally */
+            width: 1550px;
+            height: 100%;
+        }
+
+        .card {
+            width: 290px;
+            height: 387px;
+            background: rgba(238, 236, 224, 0.47);
+            border-radius: 37px;
+            position: relative;
+        }
+
+        .card-overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(238, 236, 224, 0.47);
+            border-radius: 37px;
+        }
+
+        .label-container {
+            width: 252px;
+            height: 67px;
+            position: absolute;
+            background: #22668D;
+            border-radius: 19px;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .label-content {
+            width: 100%;
+            height: 62.30px;
+            position: absolute;
+            color: #F2DBDB;
+            font-size: 36px;
+            font-family: Nunito;
+            font-weight: 900;
+            word-wrap: break-word;
+            bottom: 0;
+        }
+
+        .product-image {
+            width: 186.65px;
+            height: 246.36px;
+            left: 43.58px;
+            top: 7.55px;
+            position: absolute;
+        }
+
+        .icon-bar img {
+            object-fit: cover; /* Ensure the image covers the specified dimensions */
+            height: 517px;
+            width: 1550px;
+            display: block; /* Ensures the image is treated as a block element */
+            margin: 10px auto 0; /* Center the image horizontally using margin */
+        }
